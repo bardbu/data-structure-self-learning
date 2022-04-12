@@ -17,18 +17,18 @@ void InitList(SeqList &L){
 void IncreaseList(SeqList &L, int len){
     int *p=L.data;
     L.MaxSize+=len;
-  	L.data=(int*)malloc((L.MaxSize)*sizeof(int));
-	  for(int i=0; i<L.length; i++){
-	     	L.data[i]=p[i];
-  	}
-	  free(p);
+    L.data=(int*)malloc((L.MaxSize)*sizeof(int));
+    for(int i=0; i<L.length; i++){
+        L.data[i]=p[i];
+    }
+    free(p);
 }
 
 int main(void){
-  	SeqList L;
-	  InitList L;
-	  ...
+    SeqList L;
+    InitList L;
+    ...
     IncreaseSize(L,5);
-	  return 0;
+    return 0;
 }
     
