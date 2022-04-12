@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+#define InitSize 10
+typedef struct{
+  int* data;
+  int MaxSize;
+  int Length;
+}SeqList;
+
+void InitList(SeqList &L){
+  int* data=(int* )
