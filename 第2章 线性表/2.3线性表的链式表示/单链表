@@ -1,0 +1,74 @@
+//定义
+typedef struct LNode
+{
+    ElemType data;
+    struct LNode* next;
+}LNode, * LinkList;
+
+//初始化（不带头结点）
+bool InitList(LinkList &L)
+{
+    L=NULL;
+    return true;
+}
+
+void test()
+{
+    LinkList L;
+    InitList(L);
+    ...
+}
+
+//判断单链表是否为空
+bool Empty(LinkList L)
+{
+    return(L==NULL);
+}
+
+//初始化（带头结点）
+bool InitList(LinkList &L)
+{
+    L=(LNode*)malloc(sizeof(LNode));
+    if(L==NULL){
+        return false;
+    }
+    L->next=NULL;
+    return true;
+}
+
+//判断单链表是否为空（头结点）
+bool Empty(LinkList L)
+{
+    return(L->next==NULL);
+}
+
+//按位序插入（带头结点）
+bool ListInsert(LinkList &L, int i, int e)
+{
+    if(i<1){
+        return false
+    }
+    LNode* p;
+    int j=0;
+    p=L;
+    while(p!=NULL && j<i-1){
+        p=p->next;
+        j++;
+    }
+    if(p==NULL)
+        return false;
+    LNode* s=(LNode*)malloc(sizeof(LNode))
+    s->data=e;
+    s->next=p->next;
+    p->next=s;
+    return true;
+}
+
+
+
+
+LNode* GetElem(LinkList L, int i)
+{
+    int j=1;
+    LNode* p=L->next;
+    
