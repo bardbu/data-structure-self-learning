@@ -1,0 +1,2 @@
+bool visvited[MAX_VERTEX_NUM]
+{
