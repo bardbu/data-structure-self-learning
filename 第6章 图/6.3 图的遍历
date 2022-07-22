@@ -16,4 +16,10 @@ void BFS(Graph G,int V)
 	while(!isEmpty(Q)){
 		DeQueue(Q,v);
 		for(w=FirstNeighbor(G,v);w>=0;w=Neighbor(G,v,w))
-			if(
+			if(!visited[w]){
+				visit(w);
+				visited[w]=TRUE;
+				EnQueue(Q,w);
+			}
+	}
+}
